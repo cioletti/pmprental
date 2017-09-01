@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+<mx:Script>
+	<![CDATA[
+		import mx.controls.Alert;
+		import mx.rpc.events.ResultEvent;
+		
+		import util.ProgressBarHelper;
+
+		private var urlLogin:String;
+		public function init(urlLogin:String):void{
+			this.urlLogin = urlLogin;
+		}
+
+		protected function atualizarHorimetro(event:MouseEvent):void
+		{
+			if(serieTxt.text == '' || horimetroTxt.text == ''){
+				Alert.show("Os campos Série e Horímetro são obrigatórios", "Alerta");
+				return;
+			}
+			serviceController.atualizarHorimetro(serieTxt.text, horimetroTxt.text);
+		}
+		
+		private function onResultAtualizarHorimetro(event:ResultEvent):void{
+			Alert.show(String(event.result), "Alerta");
+		}
+
+	]]>
+</mx:Script>
+	
+	<mx:RemoteObject destination="service" invoke="{ProgressBarHelper.openProgressBar(this)}" id="serviceController" showBusyCursor="true" fault="{ProgressBarHelper.erro(event,urlLogin);ProgressBarHelper.removeProgressBar();}">
+		<mx:method name="atualizarHorimetro" result="onResultAtualizarHorimetro(event);ProgressBarHelper.removeProgressBar()" />
+	</mx:RemoteObject>
+	<mx:ApplicationControlBar x="0" y="0"  width="100%" horizontalAlign="center">
+		<mx:Label text="Atualizar Horímetro" fontWeight="bold"/>
+	</mx:ApplicationControlBar>
+	<mx:HBox x="0" y="37" width="100%" horizontalAlign="center">
+		<mx:Label text="Série       "/>
+		<mx:TextInput id="serieTxt"/>
+	</mx:HBox>
+	<mx:HBox x="0" y="61" width="100%" horizontalAlign="center">
+		<mx:Label text="Horímetro"/>
+		<mx:TextInput  id="horimetroTxt" restrict="0-9"/>
+	</mx:HBox>
+	<mx:HBox x="2" y="84" width="100%" horizontalAlign="center">
+		<mx:Button label="Atualizar" click="atualizarHorimetro(event)"/>
+	</mx:HBox>
+	
+</mx:Canvas>

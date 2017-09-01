@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioSituacaoOS" pageWidth="864" pageHeight="802" columnWidth="864" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="beginDate" class="java.lang.String"/>
+	<parameter name="endDate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select op.NUM_OS, c.ID_EQUIPAMENTO, c.NUMERO_SERIE, (select STNM from TW_FILIAL where STNO = co.FILIAL) NOME_FILIAL,
+co.FILIAL, (select DESCRICAO from REN_PMP_STATUS_AGENDAMENTO where ID = ag.ID_STATUS_AGENDAMENTO) STATUS_AGENDAMENTO,
+(select EPLSNM from TW_FUNCIONARIO where EPIDNO = ag.ID_FUNCIONARIO) TECNICO, convert(varchar(10), ag.DATA_AGENDAMENTO, 103) DATA_AGENDAMENTO,
+convert(varchar(10), ag.DATA_FATURAMENTO, 103) DATA_FATURAMENTO
+from REN_PMP_OS_OPERACIONAL op, REN_PMP_CONT_HORAS_STANDARD hs, REN_PMP_CONTRATO c, REN_PMP_CONFIG_OPERACIONAL co,
+REN_PMP_AGENDAMENTO ag
+where CONVERT(varchar(10), op.DATA, 112) between $P{beginDate} and $P{endDate}
+and hs.ID_OS_OPERACIONAL = op.ID
+and c.ID = hs.ID_CONTRATO
+and co.ID_CONTRATO = c.ID
+and ag.ID_CONT_HORAS_STANDARD = hs.ID]]>
+	</queryString>
+	<field name="NUM_OS" class="java.lang.String"/>
+	<field name="ID_EQUIPAMENTO" class="java.lang.String"/>
+	<field name="NUMERO_SERIE" class="java.lang.String"/>
+	<field name="NOME_FILIAL" class="java.lang.String"/>
+	<field name="FILIAL" class="java.math.BigDecimal"/>
+	<field name="STATUS_AGENDAMENTO" class="java.lang.String"/>
+	<field name="TECNICO" class="java.lang.String"/>
+	<field name="DATA_AGENDAMENTO" class="java.lang.String"/>
+	<field name="DATA_FATURAMENTO" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="20">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Número OS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID do Equipamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Número de Série]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Filial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="125" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Status do Agendamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="525" y="0" width="140" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Técnico]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="665" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Data Agendamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="765" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Data Faturamento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NUM_OS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="100" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ID_EQUIPAMENTO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="200" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NUMERO_SERIE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="300" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NOME_FILIAL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="400" y="0" width="125" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{STATUS_AGENDAMENTO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="525" y="0" width="140" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TECNICO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement x="665" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DATA_AGENDAMENTO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement x="765" y="0" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DATA_FATURAMENTO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="assinaturas_consultor" pageWidth="555" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="FILIAL" class="java.lang.String"/>
+	<parameter name="RAZAO_SOCIAL" class="java.lang.String"/>
+	<parameter name="PROCURADOR" class="java.lang.String"/>
+	<parameter name="MATRICULA_CONSULTOR" class="java.lang.String"/>
+	<parameter name="NOME_CONSULTOR" class="java.lang.String"/>
+	<title>
+		<band height="744" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="210" width="64" height="20"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[Setor: PMP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="210" width="68" height="20"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[MATRÍCULA:]]></text>
+			</staticText>
+			<textField pattern="dd &apos;de&apos; MMMMM &apos;de&apos; yyyy">
+				<reportElement x="184" y="5" width="143" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="98" y="84" width="352" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{RAZAO_SOCIAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="154" y="61" width="274" height="23"/>
+				<textElement/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="98" y="187" width="382" height="23"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{NOME_CONSULTOR}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="210" width="198" height="20"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{MATRICULA_CONSULTOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="5" width="168" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[Data Assinatura da Proposta:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="164" width="274" height="23"/>
+				<textElement/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="310" width="382" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[PESA - PARANÁ EQUIPAMENTOS S.A.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="333" width="382" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[SETOR DE MANUTENÇÃO PREVENTIVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="287" width="274" height="23"/>
+				<textElement/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="353" width="382" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[ (carimbo e assinatura)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="230" width="382" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[ (carimbo e assinatura)]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="assinaturas" pageWidth="555" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="RAZAO_SOCIAL" class="java.lang.String"/>
+	<parameter name="PROCURADOR" class="java.lang.String"/>
+	<title>
+		<band height="429" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="73" width="274" height="23"/>
+				<textElement/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="96" width="242" height="54" forecolor="#6666FF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[MARCOSA S/A Máquinas e Equipamentos
+JEFERSON AMORIN PARIS
+DIRETOR OPERACIONAL ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="73" width="272" height="23"/>
+				<textElement/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="96" width="242" height="54" forecolor="#6666FF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[MARCOSA S/A Máquinas e Equipamentos
+FRANCISCO ALAN OLIVEIRA DOS SANTOS
+DIRETOR FINANCEIRO ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="14" y="174" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[DE ACORDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="194" width="274" height="23"/>
+				<textElement/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="78" y="217" width="352" height="20" forecolor="#6666FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{RAZAO_SOCIAL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="78" y="237" width="352" height="20" forecolor="#6666FF"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{PROCURADOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="267" width="100" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Testemunhas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="359" width="242" height="34" forecolor="#000000"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[José Eduardo Simplício Vidal
+CPF 478 347 223 – 87 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="336" width="272" height="23"/>
+				<textElement/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="336" width="274" height="23"/>
+				<textElement/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="359" width="242" height="34" forecolor="#000000"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Benedito João Ximenes Braga
+CPF 219.716.503-82]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

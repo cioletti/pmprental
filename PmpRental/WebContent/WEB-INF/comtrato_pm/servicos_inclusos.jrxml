@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="servicos_inclusos" pageWidth="555" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.callouts" value="##Thu Jul 28 20:33:33 GMT 2011"/>
+	<subDataset name="dataset1"/>
+	<subDataset name="dataset2"/>
+	<title>
+		<band height="129" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="-2" width="555" height="20" forecolor="#000000" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="-2" width="554" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Serviços Inclusos ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="18" width="555" height="111"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font size="9"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[Compõem o Plano de Manutenção (<style isBold="true" pdfFontName="Helvetica-Bold">PMP</style>), os seguintes serviços:
+
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Execução dos Planos de Manutenção Preventiva Programada, nos intervalos e condições de execução recomendados pelo Manual de Operação e Manutenção do Fabricante, durante a cobertura contratada no item III.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Fornecimento de peças e óleos para todas as revisões.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Mão de obra especializada para todas as revisões.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Monitoramento das revisões por meio de contato semanal com o cliente para atualização do horímetro e agendamento das manutenções preventivas.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Teste de Desempenho em ciclos de 2.000 horas (TA´s), quando contratada.
+]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

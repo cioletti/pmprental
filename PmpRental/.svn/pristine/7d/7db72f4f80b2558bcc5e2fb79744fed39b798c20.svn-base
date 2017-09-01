@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TabelaFluxoDaOS" printOrder="Horizontal" pageWidth="1330" pageHeight="842" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="1330" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true">
+	<property name="ireport.zoom" value="1.7715610000000017"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="DATA_INICIO" class="java.lang.String"/>
+	<parameter name="DATA_FIM" class="java.lang.String"/>
+	<parameter name="FILIAL" class="java.util.List"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\projetos_pesa\\web\\Pmp\\WebContent\\WEB-INF\\PrecoPecaMo\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select distinct  ag.NUM_OS, C.NUMERO_SERIE, hs.IS_EXECUTADO, c.NUMERO_CONTRATO, c.VALO_CONTRATO, c.VALOR_NOTA, hs.TIPO_PM, hs.CUSTO_PECAS, hs.CUSTO_MO, CONVERT(varchar(10),ag.DATA_AGENDAMENTO,103)as DATA_AGENDAMENTO, ag.FILIAL, c.filial FILIALVENDA, hs.HORAS_MANUTENCAO
+from REN_PMP_CONTRATO c, REN_PMP_AGENDAMENTO ag right join  REN_PMP_CONT_HORAS_STANDARD hs on hs.ID = ag.ID_CONT_HORAS_STANDARD
+where CONVERT(varchar(10),c.DATA_ACEITE, 112) between $P{DATA_INICIO} and $P{DATA_FIM}
+and c.ID_TIPO_CONTRATO = (select id from REN_PMP_TIPO_CONTRATO where  SIGLA = 'VPG')
+and c.ID_STATUS_CONTRATO = (select id from REN_PMP_STATUS_CONTRATO where SIGLA = 'CA')
+and hs.ID_CONTRATO = c.ID
+order by c.NUMERO_CONTRATO, hs.HORAS_MANUTENCAO, hs.TIPO_PM]]>
+	</queryString>
+	<field name="NUM_OS" class="java.lang.String"/>
+	<field name="NUMERO_SERIE" class="java.lang.String"/>
+	<field name="IS_EXECUTADO" class="java.lang.String"/>
+	<field name="NUMERO_CONTRATO" class="java.lang.String"/>
+	<field name="VALO_CONTRATO" class="java.math.BigDecimal"/>
+	<field name="VALOR_NOTA" class="java.math.BigDecimal"/>
+	<field name="TIPO_PM" class="java.lang.String"/>
+	<field name="CUSTO_PECAS" class="java.math.BigDecimal"/>
+	<field name="CUSTO_MO" class="java.math.BigDecimal"/>
+	<field name="DATA_AGENDAMENTO" class="java.lang.String"/>
+	<field name="FILIAL" class="java.math.BigDecimal"/>
+	<field name="FILIALVENDA" class="java.math.BigDecimal"/>
+	<field name="HORAS_MANUTENCAO" class="java.math.BigDecimal"/>
+	<variable name="NUMERO_CONTRATO_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{NUMERO_CONTRATO}]]></variableExpression>
+	</variable>
+	<variable name="NUMERO_CONTRATO_2" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{NUMERO_CONTRATO}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="0" width="1330" height="51"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Preço de Peças e Mão de Obra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="827" y="51" width="102" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Filial Execução]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="599" y="51" width="112" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Mão de Obra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="499" y="51" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Peças]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="51" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Contrato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1129" y="51" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Valor Nota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="711" y="51" width="116" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Data Agendamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="51" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Tipo Pm]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1029" y="51" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Valor Contrato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="929" y="51" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Filial Contrato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="51" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[OS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="51" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Série]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1229" y="51" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Executado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="51" width="99" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[HORAS MANUT.]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="79" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NUM_OS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="100" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NUMERO_SERIE}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="200" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NUMERO_CONTRATO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="399" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{TIPO_PM}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="499" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{CUSTO_PECAS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="599" y="0" width="112" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{CUSTO_MO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="711" y="0" width="117" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{DATA_AGENDAMENTO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="828" y="0" width="101" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{FILIAL}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="929" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{FILIALVENDA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="1029" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{VALO_CONTRATO}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="1129" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{VALOR_NOTA}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="1229" y="0" width="100" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{IS_EXECUTADO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="99" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{HORAS_MANUTENCAO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

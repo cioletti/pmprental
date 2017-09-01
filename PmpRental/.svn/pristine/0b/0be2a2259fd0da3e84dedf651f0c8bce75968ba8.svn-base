@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="servicos_exclusos" pageWidth="555" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<title>
+		<band height="180" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="554" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Serviços Inclusos]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="20" forecolor="#000000" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="2" y="-1" width="552" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Serviços Exclusos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="19" width="554" height="161"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[Estão EXCLUSOS do Programa de Manutenção Preventiva (<style isBold="true" pdfFontName="Helvetica-Bold">PMP</style>) da <style isBold="true" pdfFontName="Helvetica-Bold">MARCOSA</style> os seguintes serviços:
+
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Mão de obra não pertinente a execução de serviços do PMP.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Serviços de borracharia, lavagem e conservação do Equipamento.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Manutenções diárias e semanais e lubrificação de rotina.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Reparos corretivos, ajustagens e recuperações diversas com soldas.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Substituição de peças de manutenção preventiva fora do período normal de intervenção constante no Manual de Operação e Manutenção do Equipamento.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Substituição de filtros internos e externos do sistema de ar condicionado, correias, secador e polias em geral.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Fornecimento de óleos, líquidos arrefecedores e fluidos diversos fora do período normal de intervenção constante no Manual de Operação e Manutenção do Equipamento.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Fornecimento de peças de desgaste.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> Serviços solicitados pelo <style isBold="true" pdfFontName="Helvetica-Bold">CLIENTE</style> para execução além da jornada de trabalho.
+]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

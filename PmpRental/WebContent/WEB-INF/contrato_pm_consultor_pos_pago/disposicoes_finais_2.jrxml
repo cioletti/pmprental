@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="disposicoes_finais_2" pageWidth="555" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<title>
+		<band height="98" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="98"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[<style isBold="true" pdfFontName="Helvetica-Bold">-</style> A vigência do presente Termo de Adesão é equivalente a Cobertura Contratada indicada no item III do quadro resumo iniciada com a contagem do horímetro constante no item II do mesmo quadro.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> A ausência ou o atraso do pagamento das parcelas indicadas no item III, acarreta suspensão imediata da prestação de serviço até a integral regularização dos débitos pendentes.
+<style isBold="true" pdfFontName="Helvetica-Bold">-</style> As partes elegem o foro da Comarca de Fortaleza como o único competente para dirimir divergências, dúvidas, omissões, contradições, conflitos ou omissões que porventura possam surgir durante o curso deste Termo de Adesão e dos compromissos contratuais que forem dele decorrentes.
+
+]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

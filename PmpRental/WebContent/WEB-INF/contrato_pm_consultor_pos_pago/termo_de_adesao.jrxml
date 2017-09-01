@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="termo_de_adesao" pageWidth="555" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="346"/>
+	<style name="Text Body"/>
+	<style name="Heading 1" fontSize="16" isBold="true"/>
+	<style name="Heading 4" fontSize="12" isBold="true" isItalic="true"/>
+	<style name="Default"/>
+	<subDataset name="Table Dataset 1"/>
+	<subDataset name="dataset1"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="672" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="108" width="554" height="20" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement style="Heading 1" x="2" y="108" width="554" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   3. ESCOPO DOS SERVIÇOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Default" x="0" y="130" width="556" height="66"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[3.1     Inspeção visual em todo o equipamento;
+3.2     Paralisações programadas, evitando interrupção dos serviços e/ou produção do equipamento;
+3.3     Descarte dos fluídos de acordo com as normas ambientais;
+3.4     Os serviços são realizados no próprio local de operação do equipamento;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="196" width="26" height="41"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[3.5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Default" x="30" y="196" width="524" height="41"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Fornecimento do anexo de serviços que contém todas as medidas preventivas a serem executadas no equipamento e check-list de manutenção (serviços recomendados pelos fabricantes);]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="238" width="26" height="44"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[3.6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Default" x="31" y="238" width="524" height="50"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Utilização de peças genuínas e consumíveis, de igual ou superior qualidade ao recomendando pelo fabricante;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Default" x="31" y="270" width="524" height="50"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Lubrificação de todo o equipamento (todas as graxeiras);]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="270" width="26" height="44"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[3.7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Default" x="2" y="298" width="552" height="36"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[3.8  Serviços executados por técnicos treinados e especializados em manutenção preventiva;
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="322" width="26" height="44"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[3.9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Default" x="30" y="323" width="523" height="50"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Indicação de avarias encontradas nos equipamentos durante a execução das manutenções preventivas (neste caso, o cliente deverá autorizar a PESA a executar os serviços ou ele próprio executar a ação de correção (Item 5.6)).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Heading 1" x="7" y="453" width="554" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+					<paragraph leftIndent="10"/>
+				</textElement>
+				<text><![CDATA[3. ESCOPO DOS SERVIÇOS]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="453" width="555" height="20" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement style="Heading 1" x="0" y="453" width="554" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   4. OBRIGAÇÕES PESA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="474" width="26" height="41"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[4.1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Default" x="26" y="474" width="527" height="48"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Executar os serviços contratados com rigorosa observância da melhor técnica aplicável a trabalhos de igual natureza, mediante fornecimento de profissionais técnicos devidamente qualificados e ferramental adequado e recomendado;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Default" x="24" y="532" width="521" height="34"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Os técnicos da PESA deverão observar e acatar as normas de segurança determinadas pela CLIENTE para a freqüência das suas instalações.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="532" width="26" height="28"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[4.2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="46" width="186" height="43"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[PROGRAMA DE MANUTENÇÃO PREVENTIVA ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="3" width="171" height="43"/>
+				<imageExpression class="java.lang.String"><![CDATA["Logo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="338" y="3" width="215" height="86"/>
+				<imageExpression class="java.lang.String"><![CDATA["chave.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Default" x="29" y="374" width="524" height="34"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Redução do custo de inventário de peças, ou seja, a cada intervenção os técnicos levarão os Kit’s de peças a serem utilizados;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="374" width="26" height="28"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[3.10]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+</jasperReport>

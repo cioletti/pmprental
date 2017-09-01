@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="termo_de_adesao" pageWidth="555" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Text Body"/>
+	<style name="Heading 1" fontSize="16" isBold="true"/>
+	<style name="Heading 4" fontSize="12" isBold="true" isItalic="true"/>
+	<style name="Default"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="111" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="1" width="554" height="20" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement style="Heading 1" x="0" y="1" width="554" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IV. CONDIÇÕES GERAIS DO TERMO DE ADESÃO ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Default" x="0" y="22" width="555" height="89"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9" isBold="false" isItalic="false"/>
+					<paragraph leftIndent="5" rightIndent="5" spacingBefore="5" spacingAfter="5"/>
+				</textElement>
+				<text><![CDATA[O PROGRAMA DE MANUTENÇÃO PREVENTIVA (PMP) é um serviço  ofertado pela <style isBold="true" pdfFontName="Helvetica-Bold"> MARCOSA </style>ao <style isBold="true" pdfFontName="Helvetica-Bold">CLIENTE</style>, que tem por objetivo proporcionar, mediante preço previamente ajustado, a manutenção programada preventiva de seu Equipamento, conforme especificações constantes no Manual do Fabricante. Com o PMP são realizadas intervenções com nossa Equipe Técnica especializada e peças originais <style isBold="true" pdfFontName="Helvetica-Bold">CATERPILLAR</style> de acordo com rígidas normas técnicas e de controle de contaminação. Assim, a <style isBold="true" pdfFontName="Helvetica-Bold"> MARCOSA </style> propicia ao <style isBold="true" pdfFontName="Helvetica-Bold">CLIENTE</style> os benefícios de programação de paradas, gerenciamento de pendências, histórico e reparo de Equipamentos. Para que você, <style isBold="true" pdfFontName="Helvetica-Bold">CLIENTE</style>, possa usufruir destas vantagens com segurança, são necessários o prévio conhecimento e  concordância com os Termos do Programa de Manutenção Preventiva abaixo especificados:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+</jasperReport>

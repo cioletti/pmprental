@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="servicos_exclusos" pageWidth="555" pageHeight="802" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.331000000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="171"/>
+	<parameter name="HORAS_VIGENCIA" class="java.lang.Integer"/>
+	<parameter name="RAZAO_SOCIAL" class="java.lang.String"/>
+	<parameter name="MATRICULA_CONSULTOR" class="java.lang.String"/>
+	<parameter name="NOME_CONSULTOR" class="java.lang.String"/>
+	<title>
+		<band height="773" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="113" width="556" height="20" forecolor="#000000" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="1" y="113" width="554" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   8. PRAZO DE VIGÊNCIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="141" width="201" height="22"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[A presente proposta vigorará durante ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="141" width="26" height="28"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[8.1]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="229" y="141" width="41" height="22"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$P{HORAS_VIGENCIA}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="222" width="556" height="20" forecolor="#000000" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="4" y="222" width="551" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[  9. CONDIÇÕES PARA CANCELAMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="244" width="524" height="23"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Constituem condições para cancelamento do presente instrumento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="244" width="26" height="28"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[9.1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="276" width="524" height="34"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Por vontade e iniciativa de qualquer uma das partes mediante simples notificação por escrito            com antecedência mínima de trinta (30) dias;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="276" width="22" height="28"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[A)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="303" width="524" height="19"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Por descumprimento de qualquer das cláusulas deste contrato;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="303" width="20" height="28"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[B)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4" y="322" width="21" height="28"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[C)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="322" width="524" height="19"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Decretação de falência ou deferimento de concordata preventiva;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="355" width="524" height="50"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Ocorrendo a hipótese de rescisão da proposta nos termos do parágrafo anterior, serão devidos os pagamentos dos serviços de manutenção preventiva executados até a data da rescisão e observadas todas as disposições nele estipuladas até aquela   data. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="355" width="26" height="42"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[9.2]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="1" width="171" height="43"/>
+				<imageExpression class="java.lang.String"><![CDATA["Logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="152" y="44" width="186" height="43"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11" isBold="true"/>
+					<paragraph leftIndent="5"/>
+				</textElement>
+				<text><![CDATA[PROGRAMA DE MANUTENÇÃO PREVENTIVA ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="338" y="1" width="215" height="86"/>
+				<imageExpression class="java.lang.String"><![CDATA["chave.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="271" y="141" width="281" height="22"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[horas,  com início a partir da assinatura desta, com base]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="155" width="290" height="22"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[no horímetro do equipamento.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="170" width="26" height="28"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[8.2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="170" width="524" height="50"/>
+				<textElement verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Quando o horímetro do equipamento ultrapassar a quantidade de horas de concessão, a mesma deixa de valer. Os atendimentos subsequentes serão realizados mediante pagamento ou firmação do contrato de Manutenção Preventiva.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="743" width="382" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[SETOR DE MANUTENÇÃO PREVENTIVA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="1" y="405" width="554" height="20" forecolor="#000000" backcolor="#CCCCCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="2" y="405" width="553" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[   10. APROVAÇÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="429" width="26" height="28"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[10.1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="728" width="382" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[PESA - PARANÁ EQUIPAMENTOS S.A.]]></text>
+			</staticText>
+			<textField pattern="dd &apos;de&apos; MMMMM &apos;de&apos; yyyy">
+				<reportElement x="185" y="469" width="143" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="638" width="198" height="15"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{MATRICULA_CONSULTOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="24" y="469" width="161" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[Data Assinatura da Proposta:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="429" width="524" height="40"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font fontName="Tahoma" size="11" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Caso a presente proposta mereça aprovação, pedimos-lhe a gentileza de firmar este acordo por meio de sua assinatura, passando esta a valer como Contrato de Concessão de Manutenção Preventiva.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="758" width="382" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[ (carimbo e assinatura)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="99" y="543" width="352" height="15" forecolor="#000000"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{RAZAO_SOCIAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="155" y="528" width="274" height="15"/>
+				<textElement/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="638" width="64" height="15"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[Setor: PMP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="653" width="382" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[ (carimbo e assinatura)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="558" width="352" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[ (carimbo e assinatura)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="99" y="623" width="382" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{NOME_CONSULTOR}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="155" y="608" width="274" height="15"/>
+				<textElement/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="713" width="274" height="15"/>
+				<textElement verticalAlignment="Top"/>
+				<text><![CDATA[_____________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="235" y="638" width="68" height="15"/>
+				<textElement>
+					<font fontName="Tahoma" size="11"/>
+				</textElement>
+				<text><![CDATA[MATRÍCULA:]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>
